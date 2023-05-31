@@ -18,6 +18,9 @@ describe Xhash::SAT do
                 mothers_last_name: 'SANCHEZ',
                 gender: 'H',
                 province_of_birth: 'DF',
+                province_of_birth_name: 'CIUDAD DE MEXICO',
+                origin_country: 'MX',
+                document_proof_string: 'ACTA DE NACIMIENTO',
                 day_of_birth: '1999-08-28 00:00:00',
                 updated_at: '2019-10-03 13:12:32',
                 created_at: '2019-10-03 13:12:32',
@@ -37,6 +40,9 @@ describe Xhash::SAT do
       expect(curp_data.day_of_birth).to eq('1999-08-28 00:00:00')
       expect(curp_data.gender).to eq('H')
       expect(curp_data.curp).to eq(curp)
+      expect(curp_data.province_of_birth_name).to eq('CIUDAD DE MEXICO')
+      expect(curp_data.origin_country).to eq('MX')
+      expect(curp_data.document_proof_string).to eq('ACTA DE NACIMIENTO')
     end
 
     it 'fails with invalid CURP' do
